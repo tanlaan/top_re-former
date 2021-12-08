@@ -1,3 +1,6 @@
+<% if flash[:success] %>
+  <h2><%= flash[:success] %></h2>
+<% end %>
 <%= form_with model: @user do |form| %>
   <%= form.label :username, "Username:" %><br>
   <%= form.text_field :username, value:  "username"%><br>

@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     # @user.update(username: params[:user][:username], email: params[:user][:email], password: params[:user][:password])
     @user.update(user_params)
     if @user.save
+      flash[:success] = 'Record updated!'
       redirect_to new_user_path
     else
       render :edit
